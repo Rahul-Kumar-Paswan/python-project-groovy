@@ -1,40 +1,20 @@
-def gv
+def check() {
+    echo "building the application..."
+} 
 
-pipeline {
-    agent any
-    stages {
-        stage("init") {
-            steps {
-                script {
-                    gv = load "script.groovy"
-                }
-            }
-        }
-        stage("checking") {
-            steps {
-                script {
-                    echo "checking"
-                    gv.check()
-                }
-            }
-        }
-        stage("build image") {
-            steps {
-                script {
-                    echo "building image"
-                    gv.buildImage()
-                }
-            }
-        }
-        stage("deploy") {
-            steps {
-                script {
-                    echo "deploying"
-                    gv.deployApp()
-                }
-            }
-        }
-    }   
-}
+def buildImage() {
+    echo "building the docker image..."
+    withCredentials([usernamePassword(credentialsId: 'docker-credentials', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
+        sh 'docker build -t python-demo:1.0 .'
+        sh "echo $PASS | docker login -u $USER --password-stdin"
+        sh 'docker push rahulkumarpaswan/python-demo:1.0'
+    }
+} 
 
-//comment
+def deployApp() {
+    echo 'deploying the application...'
+} 
+
+return this
+
+//

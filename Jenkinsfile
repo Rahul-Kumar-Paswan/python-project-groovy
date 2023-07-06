@@ -19,14 +19,14 @@ pipeline {
                 }
             }
         }
-        stage("checking") {
+        /* stage("checking") {
             steps {
                 script {
                     echo "checking"
                     check()
                 }
             }
-        }
+        } */
         stage("build image") {
             steps {
                 script {

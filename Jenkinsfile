@@ -24,7 +24,7 @@ pipeline {
         stage("build image") {
             steps {
                 script {
-                    echo "building image ..."
+                    echo "building image ....."
                     buildImage 'rahulkumarpaswan/python-demo:1.4'
                     dockerLogin()
                     pushImage 'rahulkumarpaswan/python-demo:1.4'

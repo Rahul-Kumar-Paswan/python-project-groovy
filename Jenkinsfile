@@ -31,9 +31,9 @@ pipeline {
             steps {
                 script {
                     echo "building image ....."
-                    buildImage ('rahulkumarpaswan/python-demo:1.5')
+                    buildImage 'rahulkumarpaswan/python-demo:1.5'
                     dockerLogin()
-                    pushImage ('rahulkumarpaswan/python-demo:1.5')
+                    pushImage 'rahulkumarpaswan/python-demo:1.5'
                 }
             }
         }

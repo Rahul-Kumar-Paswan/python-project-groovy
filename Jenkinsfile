@@ -37,4 +37,8 @@ pipeline {
     }   
 }
 
+<<<<<<< HEAD
 //comment
+=======
+//comment
+>>>>>>> feature1

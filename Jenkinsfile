@@ -26,6 +26,7 @@ pipeline {
                 script {
                     echo "building image ..."
                     buildImage 'rahulkumarpaswan/python-demo:1.4'
+                    dockerLogin()
                     pushImage 'rahulkumarpaswan/python-demo:1.4'
                 }
             }

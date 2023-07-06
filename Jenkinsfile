@@ -17,7 +17,7 @@ pipeline {
             steps {
                 script {
                     echo "checking"
-                    check
+                    check()
                 }
             }
         }
@@ -25,7 +25,7 @@ pipeline {
             steps {
                 script {
                     echo "building image"
-                    buildImage
+                    buildImage()
                 }
             }
         }

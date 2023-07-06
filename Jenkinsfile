@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     echo "checking"
-                    gv.check()
+                    check()
                 }
             }
         }
@@ -24,7 +24,7 @@ pipeline {
             steps {
                 script {
                     echo "building image"
-                    gv.buildImage()
+                    buildImage()
                 }
             }
         }

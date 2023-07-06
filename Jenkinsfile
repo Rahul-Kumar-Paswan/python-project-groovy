@@ -25,7 +25,7 @@ pipeline {
             steps {
                 script {
                     echo "building image"
-                    buildImage 'rahulkumarpaswan/python-demo:1.2'
+                    buildImage 'rahulkumarpaswan/python-demo:1.3'
                 }
             }
         }

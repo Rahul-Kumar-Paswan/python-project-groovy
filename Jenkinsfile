@@ -1,3 +1,5 @@
+#!/usr/bin/env groovy
+
 def gv
 
 pipeline {
@@ -37,8 +39,3 @@ pipeline {
     }   
 }
 
-<<<<<<< HEAD
-//comment
-=======
-//comment
->>>>>>> feature1

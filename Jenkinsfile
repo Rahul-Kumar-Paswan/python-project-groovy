@@ -17,7 +17,7 @@ pipeline {
             steps {
                 script {
                     echo "checking"
-                    check()
+                    check
                 }
             }
         }

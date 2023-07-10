@@ -32,7 +32,7 @@ pipeline {
         stage("build and push image") {
             steps {
                 script {
-                    echo "Build and Push Image"
+                    echo "Build and Push Image ..."
                     buildImage "rahulkumarpaswan/python-demo:1.5"
                     dockerLogin()
                     dockerPush 'rahulkumarpaswan/python-demo:1.5'
